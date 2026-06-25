@@ -1,16 +1,60 @@
-# React + Vite
+# 🏦 Multi-Step Loan Application Form
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
 
-Currently, two official plugins are available:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 📖 Overview
 
-## React Compiler
+A production-style multi-step loan application system built using React.js. The application guides users through the complete loan application process including personal details, address information, loan details, employment information, document uploads, identity verification, e-signature capture, application review, and final submission.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
 
-## Expanding the Oxlint configuration
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+## ✨ Features
+
+- ✅ Multi-Step Application Flow
+- ✅ React Hook Form Validation
+- ✅ Context API State Management
+- ✅ Conditional Field Rendering
+- ✅ Progress Indicator
+- ✅ Local Storage Auto Save
+- ✅ Document Upload & Preview
+- ✅ PAN Verification Simulation
+- ✅ Aadhaar Verification Simulation
+- ✅ E-Signature Capture
+- ✅ Review Application Page
+- ✅ Success Confirmation Page
+- ✅ Responsive UI
+
+
+
+## 🛠️ Tech Stack
+
+### Frontend
+
+- React.js
+- React Hook Form
+- Context API
+- Tailwind CSS
+
+### Tools
+
+- Vite
+- Git
+- GitHub
+- Vercel
+
+
+
+## 🔄 Application Flow
+
+1. Personal Information
+2. Address Information
+3. Loan Information
+4. Employment Information
+5. Document Upload
+6. Review Application
+7. Verification
+8. E-Signature
+9. Success Page
+
+
+
