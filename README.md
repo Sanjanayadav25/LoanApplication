@@ -56,5 +56,11 @@ A production-style multi-step loan application system built using React.js. The 
 8. E-Signature
 9. Success Page
 
+## Live Demo
 
+https://loan-application-jwzz.vercel.app
+
+## GitHub Repository
+
+https://github.com/Sanjanayadav25/LoanApplication
 
