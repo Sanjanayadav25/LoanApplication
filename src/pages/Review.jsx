@@ -12,8 +12,8 @@ function Review({ nextStep, prevStep, step }) {
 
   const handleProceed = async () => {
     try {
-      const response = await axios.post(
-        "http://localhost:5000/api/applications/apply",
+      const response = axios.post(
+        `${import.meta.env.VITE_API_URL}/api/applications/apply`,
         FormData,
       );
 
