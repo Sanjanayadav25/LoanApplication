@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import { FormContext } from "../context/FormContext";
 import ProgressBar from "../components/ProgressBar";
+import axios from "axios";
 
 function Review({ nextStep, prevStep, step }) {
   const { FormData } = useContext(FormContext);
@@ -8,6 +9,22 @@ function Review({ nextStep, prevStep, step }) {
 
   const eligible =
     Number(FormData.monthlyIncome) * 20 >= Number(FormData.loanAmount);
+
+  const handleProceed = async () => {
+    try {
+      const response = await axios.post(
+        "http://localhost:5000/api/applications/apply",
+        FormData,
+      );
+
+      console.log(response.data);
+
+      nextStep();
+    } catch (error) {
+      console.log(error);
+      alert("Failed to submit application");
+    }
+  };
 
   return (
     <div className="min-h-screen bg-gray-100 flex justify-center items-center">
@@ -149,10 +166,10 @@ function Review({ nextStep, prevStep, step }) {
             </button>
 
             <button
-              onClick={nextStep}
+              onClick={handleProceed}
               className="bg-green-600 text-white px-6 py-3 rounded-lg"
             >
-              Proceed
+              Submit Application
             </button>
           </div>
         </div>

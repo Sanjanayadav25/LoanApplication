@@ -5,7 +5,7 @@ import LoanInfo from "./pages/LoanInfo";
 import EmploymentInfo from "./pages/EmploymentInfo";
 import Documents from "./pages/Documents";
 import Review from "./pages/Review";
-import Verification from "./pages/verification";
+import Verification from "./pages/Verification";
 import Success from "./pages/Success";
 import Signature from "./pages/Signature";
 
