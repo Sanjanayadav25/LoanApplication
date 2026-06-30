@@ -40,15 +40,15 @@ function App() {
       return <Documents nextStep={nextStep} prevStep={prevStep} step={step} />;
 
     case 6:
-      return <Review nextStep={nextStep} prevStep={prevStep} step={step} />;
+      return <Verification nextStep={nextStep} prevStep={prevStep} step={step} />;
 
     case 7:
       return (
-        <Verification nextStep={nextStep} prevStep={prevStep} step={step} />
+        <Signature nextStep={nextStep} prevStep={prevStep} step={step} />
       );
 
     case 8:
-      return <Signature nextStep={nextStep} prevStep={prevStep} step={step} />;
+      return <Review nextStep={nextStep} prevStep={prevStep} step={step} />;
 
     case 9:
       return <Success />;

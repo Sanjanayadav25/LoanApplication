@@ -12,7 +12,7 @@ function Review({ nextStep, prevStep, step }) {
 
   const handleProceed = async () => {
     try {
-      const response = axios.post(
+      const response = await axios.post(
         `${import.meta.env.VITE_API_URL}/api/applications/apply`,
         FormData,
       );
@@ -139,6 +139,20 @@ function Review({ nextStep, prevStep, step }) {
             <p>
               <strong>Salary Slip:</strong> {FormData.salaryslip?.name}
             </p>
+
+            <p>
+              <strong>Your Signature:</strong>
+            </p>
+
+            {FormData.signature ? (
+              <img
+                src={FormData.signature}
+                alt="Signature"
+                className="border rounded-md w-72 mt-2"
+              />
+            ) : (
+              <p className="text-gray-500">No signature provided.</p>
+            )}
           </div>
 
           <div className="border rounded-lg p-4">

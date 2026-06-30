@@ -8,6 +8,10 @@ function Signature({ nextStep, prevStep, step }) {
   const { FormData, setFormData } = useContext(FormContext);
 
   const saveSignature = () => {
+    if (sigRef.current.isEmpty()) {
+    alert("Please provide your signature.");
+    return;
+}
     const signature = sigRef.current.toDataURL();
 
     setFormData({
@@ -21,12 +25,9 @@ function Signature({ nextStep, prevStep, step }) {
   return (
     <div className="min-h-screen bg-gray-100 flex justify-center items-center">
       <div className="bg-white p-8 rounded-xl shadow-lg w-full max-w-3xl">
-
         <ProgressBar step={step} totalSteps={9} />
 
-        <h1 className="text-3xl font-bold mb-6">
-          E-Signature
-        </h1>
+        <h1 className="text-3xl font-bold mb-6">E-Signature</h1>
 
         <div className="border rounded-lg">
           <SignatureCanvas
@@ -40,8 +41,12 @@ function Signature({ nextStep, prevStep, step }) {
           />
         </div>
 
-        <div className="flex justify-between mt-6">
+        <p className="text-gray-600 mb-4">
+          Please sign inside the box below. This signature will be attached to
+          your loan application.
+        </p>
 
+        <div className="flex justify-between mt-6">
           <button
             onClick={prevStep}
             className="bg-gray-500 text-white px-6 py-3 rounded-lg"
@@ -50,14 +55,19 @@ function Signature({ nextStep, prevStep, step }) {
           </button>
 
           <button
+            onClick={() => sigRef.current.clear()}
+            className="bg-red-500 text-white px-5 py-3 rounded-lg"
+          >
+            Clear
+          </button>
+
+          <button
             onClick={saveSignature}
             className="bg-blue-600 text-white px-6 py-3 rounded-lg"
           >
             Save Signature
           </button>
-
         </div>
-
       </div>
     </div>
   );
