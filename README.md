@@ -8,7 +8,7 @@ A full-stack **MERN Loan Application Management System** that allows users to ap
 ## 🔗 Project Links
 
 - **GitHub Repository:** https://github.com/Sanjanayadav25/LoanApplication
-- **Frontend Demo:** https://your-vercel-link.vercel.app
+- **Frontend Demo:** https://loan-application-lemon.vercel.app
 - **Backend API:** https://loanapplication-qsdw.onrender.com
 
 ---
