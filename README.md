@@ -406,6 +406,16 @@ PORT=5000
 
 > Add screenshots of:
 
+<img width="1366" height="683" alt="personalinfo" src="https://github.com/user-attachments/assets/d1e4513f-1f6f-439f-8c79-a05635152513" />
+<img width="1366" height="662" alt="addressinfo" src="https://github.com/user-attachments/assets/bf75a17d-5054-4b73-a3e5-79da11c13389" />
+<img width="1366" height="677" alt="loaninfo" src="https://github.com/user-attachments/assets/15e0f383-f2b7-4a81-877c-f02a9208c2c8" />
+<img width="1366" height="677" alt="employmentinfo" src="https://github.com/user-attachments/assets/3d6d18ab-588b-4467-8570-fe38ff75d036" />
+<img width="1366" height="693" alt="documents" src="https://github.com/user-attachments/assets/421a4ffc-db2e-44da-8c46-1ad9cfbbaf11" />
+<img width="1366" height="670" alt="verification" src="https://github.com/user-attachments/assets/84c84579-b7d3-413f-af1c-37a7bd3dd5ad" />
+<img width="1366" height="665" alt="signature" src="https://github.com/user-attachments/assets/f3d2ad94-dac7-425c-a01f-05b0da53cae6" />
+<img width="1366" height="685" alt="review" src="https://github.com/user-attachments/assets/e1b279fc-792e-4076-aa37-e9c7f2f0241f" />
+<img width="1366" height="637" alt="success" src="https://github.com/user-attachments/assets/a0d0ebe1-f6bf-482f-95e0-cf0597a8d5a8" />
+
 - Personal Information
 - Address Page
 - Loan Information
