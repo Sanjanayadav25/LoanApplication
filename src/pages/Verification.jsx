@@ -13,7 +13,7 @@ function Verification({ nextStep, prevStep, step }) {
     setTimeout(() => {
       setAadhaarLoading(false);
       setAadhaarVerified(true);
-    }, [2000]);
+    }, 2000);
   };
 
   const verifyPan = () => {
@@ -22,7 +22,7 @@ function Verification({ nextStep, prevStep, step }) {
     setTimeout(() => {
       setPanVerified(true);
       setPanLoading(false);
-    }, [2000]);
+    }, 2000);
   };
 
   return (
@@ -42,6 +42,7 @@ function Verification({ nextStep, prevStep, step }) {
               </p>
             ) : !panVerified ? (
               <button
+                data-testid="verify-pan"
                 onClick={verifyPan}
                 className="bg-blue-600 text-white px-5 py-2 rounded"
               >
@@ -60,6 +61,7 @@ function Verification({ nextStep, prevStep, step }) {
               </p>
             ) : !aadhaarVerified ? (
               <button
+                 data-testid="verify-aadhaar"
                 onClick={verifyAadhaar}
                 className="bg-blue-600 text-white px-5 py-2 rounded"
               >
@@ -78,6 +80,7 @@ function Verification({ nextStep, prevStep, step }) {
             </button>
 
             <button
+              data-testid="verification-next"
               disabled={!panVerified || !aadhaarVerified}
               onClick={nextStep}
               className="bg-green-600 text-white px-6 py-3 rounded-lg disabled:bg-gray-400"

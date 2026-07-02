@@ -14,10 +14,10 @@ function Signature({ nextStep, prevStep, step }) {
 }
     const signature = sigRef.current.toDataURL();
 
-    setFormData({
-      ...FormData,
+    setFormData((prev)=>({
+      ...prev,
       signature,
-    });
+    }));
 
     nextStep();
   };
@@ -37,6 +37,7 @@ function Signature({ nextStep, prevStep, step }) {
               width: 700,
               height: 250,
               className: "w-full",
+              "data-testid": "signature-canvas",
             }}
           />
         </div>
@@ -62,6 +63,7 @@ function Signature({ nextStep, prevStep, step }) {
           </button>
 
           <button
+            data-testid="save-signature"
             onClick={saveSignature}
             className="bg-blue-600 text-white px-6 py-3 rounded-lg"
           >

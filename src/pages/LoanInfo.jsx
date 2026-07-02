@@ -42,6 +42,7 @@ function LoanInfo({ nextStep, prevStep, step }) {
           <div className="space-y-4">
 
             <select
+              data-testid="loanType"
               className="w-full border p-3 rounded-lg"
               {...register("loanType", {
                 required: "Please select a loan type",
@@ -58,6 +59,7 @@ function LoanInfo({ nextStep, prevStep, step }) {
               <p className="text-red-500 text-sm">{errors.loanType.message}</p>
             )}
              <input
+              data-testid="loanAmount"
               type="number"
               placeholder="Loan Amount"
               className="w-full border p-3 rounded-lg"
@@ -67,6 +69,7 @@ function LoanInfo({ nextStep, prevStep, step }) {
             />
 
             <textarea
+              data-testid="loanPurpose"
               placeholder="Loan Purpose"
               className="w-full border p-3 rounded-lg"
               {...register("loanPurpose", {
@@ -79,6 +82,7 @@ function LoanInfo({ nextStep, prevStep, step }) {
             {loanType === "Home Loan" && (
               <>
                 <input
+                  data-testid="propertyValue"
                   type="number"
                   placeholder="Property Value"
                   className="w-full border p-3 rounded-lg"
@@ -86,6 +90,7 @@ function LoanInfo({ nextStep, prevStep, step }) {
                 />
 
                 <input
+                  data-testid="propertyAddress"
                   type="text"
                   placeholder="Property Address"
                   className="w-full border p-3 rounded-lg"
@@ -99,6 +104,7 @@ function LoanInfo({ nextStep, prevStep, step }) {
             {loanType === "Business Loan" && (
               <>
                 <input
+                 data-testid= "businessName"
                   type="text"
                   placeholder="Business Name"
                   className="w-full border p-3 rounded-lg"
@@ -106,6 +112,7 @@ function LoanInfo({ nextStep, prevStep, step }) {
                 />
 
                 <input
+                  data-testid="registration-number"
                   type="text"
                   placeholder="Business Registration Number"
                   className="w-full border p-3 rounded-lg"
@@ -125,6 +132,7 @@ function LoanInfo({ nextStep, prevStep, step }) {
               </button>
 
               <button
+                data-testid="loan-next"
                 type="submit"
                 className="bg-blue-600 text-white px-6 py-3 rounded-lg"
               >

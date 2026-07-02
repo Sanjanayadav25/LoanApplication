@@ -15,7 +15,9 @@ function Success() {
       <div className="bg-white shadow-xl rounded-xl p-10 w-full max-w-2xl text-center">
         <div className="text-6xl mb-4">🎉</div>
 
-        <h1 className="text-4xl font-bold text-green-600 mb-4">
+        <h1
+        data-testid ="success-heading"
+         className="text-4xl font-bold text-green-600 mb-4">
           Loan Application Submitted Successfully
         </h1>
 
@@ -27,7 +29,9 @@ function Success() {
         <div className="bg-gray-100 rounded-lg p-4 mb-6">
           <p className="font-semibold">Application ID</p>
 
-          <p className="text-2xl font-bold text-blue-600">
+          <p
+          data-testid ="application-id"
+           className="text-2xl font-bold text-blue-600">
             {applicationId}
           </p>
         </div>
@@ -55,6 +59,7 @@ function Success() {
 
         <div className="flex justify-center gap-4">
           <button
+            data-testid ="print-summary"
             onClick={() => window.print()}
             className="bg-blue-600 text-white px-6 py-3 rounded-lg"
           >
@@ -62,6 +67,7 @@ function Success() {
           </button>
 
           <button
+            data-testid ="apply-again"
             onClick={handleNewApplication}
             className="bg-green-600 text-white px-6 py-3 rounded-lg"
           >

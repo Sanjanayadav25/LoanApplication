@@ -32,6 +32,7 @@ function PersonalInfo({ nextStep , step }) {
           <div className="space-y-4">
             <div>
               <input
+                data-testid="fullName"
                 type="text"
                 placeholder="Full Name"
                 className="w-full border p-3 rounded-lg"
@@ -49,6 +50,7 @@ function PersonalInfo({ nextStep , step }) {
 
             <div>
               <input
+               data-testid="email"
                 type="email"
                 placeholder="Email"
                 className="w-full border p-3 rounded-lg"
@@ -70,6 +72,7 @@ function PersonalInfo({ nextStep , step }) {
 
             <div>
               <input
+                data-testid="phone"
                 type="text"
                 placeholder="Phone Number"
                 className="w-full border p-3 rounded-lg"
@@ -90,6 +93,7 @@ function PersonalInfo({ nextStep , step }) {
             </div>
 
             <button
+              data-testid="personal-next"
               type="submit"
               className="bg-blue-600 text-white px-6 py-3 rounded-lg"
             >

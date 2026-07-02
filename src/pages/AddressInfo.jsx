@@ -14,7 +14,13 @@ function AddressInfo({ nextStep, prevStep, step }) {
     formState: { errors },
   } = useForm({ defaultValues: FormData });
 
-  const [suggestions, setSuggestions] = useState([]);
+ 
+
+  const address1Register = register("address1", {
+    required: "Address is required",
+  });
+
+   const [suggestions, setSuggestions] = useState([]);
 
   const searchAddress = async (value) => {
     if (value.length < 3) {
@@ -31,6 +37,7 @@ function AddressInfo({ nextStep, prevStep, step }) {
             format: "json",
             addressdetails: 1,
             limit: 5,
+            countrycodes: "in",
           },
         },
       );
@@ -81,14 +88,13 @@ function AddressInfo({ nextStep, prevStep, step }) {
           <div className="space-y-4">
             <div>
               <input
+                data-testid="address1"
                 type="text"
                 placeholder="Address Line 1"
                 className="w-full border p-3 rounded-lg"
-                {...register("address1", {
-                  required: "Address is required",
-                })}
+                {...address1Register}
                 onChange={(e) => {
-                  searchAddress(e.target.value);
+                  (address1Register.onChange(e), searchAddress(e.target.value));
                 }}
               />
 
@@ -102,6 +108,7 @@ function AddressInfo({ nextStep, prevStep, step }) {
               <div className="border rounded-lg mt-2 bg-white shadow-md max-h-60 overflow-y-auto">
                 {suggestions.map((item, index) => (
                   <div
+                    data-testid="address-suggestion"
                     key={index}
                     className="p-3 cursor-pointer hover:bg-gray-100"
                     onClick={() => selectAddress(item)}
@@ -123,6 +130,7 @@ function AddressInfo({ nextStep, prevStep, step }) {
 
             <div>
               <input
+                data-testid="city"
                 type="text"
                 placeholder="City"
                 className="w-full border p-3 rounded-lg"
@@ -138,6 +146,7 @@ function AddressInfo({ nextStep, prevStep, step }) {
 
             <div>
               <input
+                data-testid="state"
                 type="text"
                 placeholder="State"
                 className="w-full border p-3 rounded-lg"
@@ -153,6 +162,7 @@ function AddressInfo({ nextStep, prevStep, step }) {
 
             <div>
               <input
+                data-testid="pincode"
                 type="text"
                 placeholder="Pincode"
                 className="w-full border p-3 rounded-lg"
@@ -180,6 +190,7 @@ function AddressInfo({ nextStep, prevStep, step }) {
               </button>
 
               <button
+                data-testid="address-next"
                 type="submit"
                 className="bg-blue-600 text-white px-6 py-3 rounded-lg"
               >

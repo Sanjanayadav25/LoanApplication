@@ -44,6 +44,7 @@ function EmploymentInfo({ nextStep, prevStep, step }) {
             {/* Employment Type */}
 
             <select
+              data-testid="employmentType"
               className="w-full border p-3 rounded-lg"
               {...register("employmentType", {
                 required: "Please select employment type",
@@ -73,6 +74,7 @@ function EmploymentInfo({ nextStep, prevStep, step }) {
             {employmentType === "Salaried" && (
               <>
                 <input
+                  data-testid="companyName"
                   type="text"
                   placeholder="Company Name"
                   className="w-full border p-3 rounded-lg"
@@ -82,11 +84,12 @@ function EmploymentInfo({ nextStep, prevStep, step }) {
                 />
                  {errors.companyName && (
                  <p className="text-red-500 text-sm">
-                {errors.monthlyIncome.message}
+                {errors.companyName.message}
                 </p>
                   )}
 
                 <input
+                  data-testid="jobTitle"
                   type="text"
                   placeholder="Job Title"
                   className="w-full border p-3 rounded-lg"
@@ -99,6 +102,7 @@ function EmploymentInfo({ nextStep, prevStep, step }) {
 
             {employmentType === "Self Employed" && (
               <input
+                data-testid="businessName"
                 type="text"
                 placeholder="Business Name"
                 className="w-full border p-3 rounded-lg"
@@ -107,6 +111,7 @@ function EmploymentInfo({ nextStep, prevStep, step }) {
             )}
 
             <input
+              data-testid="monthlyIncome"
               type="number"
               placeholder="Monthly Income"
               className="w-full border p-3 rounded-lg"
@@ -122,6 +127,7 @@ function EmploymentInfo({ nextStep, prevStep, step }) {
             )}
 
             <input
+              data-testid="experience"
               type="number"
               placeholder="Years of Experience"
               className="w-full border p-3 rounded-lg"
@@ -147,6 +153,7 @@ function EmploymentInfo({ nextStep, prevStep, step }) {
               </button>
 
               <button
+                data-testid="employment-next"
                 type="submit"
                 className="bg-blue-600 text-white px-6 py-3 rounded-lg"
               >

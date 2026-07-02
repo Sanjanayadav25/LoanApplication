@@ -6,6 +6,8 @@ import axios from "axios";
 function Review({ nextStep, prevStep, step }) {
   const { FormData } = useContext(FormContext);
   console.log(FormData);
+  
+ console.log(import.meta.env.VITE_API_URL); 
 
   const eligible =
     Number(FormData.monthlyIncome) * 20 >= Number(FormData.loanAmount);
@@ -21,7 +23,10 @@ function Review({ nextStep, prevStep, step }) {
 
       nextStep();
     } catch (error) {
-      console.log(error);
+      console.log("Full Error:", error);
+  console.log("Response:", error.response);
+  console.log("Response Data:", error.response?.data);
+  console.log("Status:", error.response?.status);
       alert("Failed to submit application");
     }
   };
@@ -146,6 +151,7 @@ function Review({ nextStep, prevStep, step }) {
 
             {FormData.signature ? (
               <img
+                data-testid ="signature-preview"
                 src={FormData.signature}
                 alt="Signature"
                 className="border rounded-md w-72 mt-2"
@@ -180,6 +186,7 @@ function Review({ nextStep, prevStep, step }) {
             </button>
 
             <button
+             data-testid="submit-application"
               onClick={handleProceed}
               className="bg-green-600 text-white px-6 py-3 rounded-lg"
             >
