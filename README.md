@@ -5,6 +5,14 @@ A full-stack **MERN Loan Application Management System** that allows users to ap
 
 ---
 
+## 🔗 Project Links
+
+- **GitHub Repository:** https://github.com/Sanjanayadav25/LoanApplication
+- **Frontend Demo:** https://your-vercel-link.vercel.app
+- **Backend API:** https://loanapplication-qsdw.onrender.com
+
+---
+
 ## 📌 Project Overview
 
 This application simulates the complete workflow of a real-world loan application process.
@@ -319,7 +327,7 @@ Stores loan application data into MongoDB.
 ## Clone Repository
 
 ```bash
-git clone <repository-url>
+git clone  https://github.com/Sanjanayadav25/LoanApplication
 ```
 
 ---
@@ -352,16 +360,10 @@ npm run dev
 # ▶️ Run Backend
 
 ```bash
-npm run server
+npx nodemon server.js
 ```
 
-or
 
-```bash
-npm start
-```
-
-(depending on your backend configuration)
 
 ---
 
@@ -386,7 +388,7 @@ npx cypress run
 ## Frontend
 
 ```
-VITE_API_URL=<Backend API URL>
+VITE_API_URL=https://loanapplication-qsdw.onrender.com
 ```
 
 ---
@@ -394,8 +396,7 @@ VITE_API_URL=<Backend API URL>
 ## Backend
 
 ```
-MONGO_URI=<MongoDB Connection String>
-
+MONGO_URI=<your_mongodb_connection_string>
 PORT=5000
 ```
 
